@@ -1,0 +1,28 @@
+{
+  "suggest.enablePreselect": true,
+  "diagnostic.displayByAle": true,
+  "languageserver":{
+    "golang":{
+      "command": "go-langserver",
+      "filetypes": ["go"],
+      "initializationOptions": {
+        "gocodeCompletionEnabled": true,
+        "diagnosticsEnabled": true,
+        "lintTool": "golint"
+      }
+    },
+    "elmLS": {
+      "command": "elm-language-server",
+      "args": ["--stdio"],
+      "filetypes": ["elm"],
+      "rootPatterns": ["elm.json"],
+      "initializationOptions": {
+        "elmPath": "elm",
+        "elmFormatPath": "elm-format",
+        "elmTestPath": "elm-test"
+      }
+    }
+  },
+  "codeLens.enable": true,
+  "solargraph.commandPath": "/Users/uji/.rbenv/shims/solargraph"
+}

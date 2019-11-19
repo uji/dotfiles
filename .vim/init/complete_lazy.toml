@@ -1,0 +1,7 @@
+[[plugins]]
+repo = 'neoclide/coc.nvim'
+rev = 'release'
+if = '''executable('node') && executable('yarn')'''
+build = './install.sh nightly'
+merged = '0'
+hook_add = 'source ~/dotfiles/.vim/lazys/coc.vim'

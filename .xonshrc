@@ -1,0 +1,48 @@
+$PATH.append("/usr/local/bin")
+$BASH_COMPLETIONS.append('/Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash')
+$VI_MODE = True
+$XONSH_SHOW_TRACEBACK = True
+$SUGGEST_COMMANDS = True
+
+$RIGHT_PROMPT = "{curr_branch}"
+$PROMPT = "{INTENSE_YELLOW}[ {cwd} ] {GREEN}$ "
+$BOTTOM_TOOLBAR = "{BACKGROUND_WHITE}{BLACK}{user}@{hostname}"
+$XONSH_COLOR_STYLE = 'default'
+$LS_COLORS = "di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30"
+$COLOR_INPUT = True
+$COLOR_RESULTS = True
+
+aliases["sx"] = "source ~/.xonshrc"
+aliases["l"] = "ls -ltr"
+aliases["la"] = "ls -a"
+aliases["ll"] = "ls -l"
+aliases["so"] = "source"
+aliases["v"] = "nvim"
+aliases["vx"] = "nvim ~/.xonshrc"
+aliases["p"] = "python3"
+
+# git
+aliases["g"] = "git"
+aliases["gs"] = "git status -sb"
+aliases["gco"] = "git checkout"
+aliases["gp"] = ["git", "pull"]
+aliases["gb"] = "git branch"
+aliases["gl"] = "git log --graph --name-status"
+
+# rails aliases
+aliases["ra"] = "bin/rails"
+aliases["rac"] = "bin/rails c"
+aliases["rar"] = "bin/rails routes"
+aliases["ram"] = "bin/rails db:migrate"
+aliases["rs"] = "bin/rspec"
+
+# go aliases
+# aliases["g"] = "go run"
+# aliases["gb"] = "go build"
+
+import os
+def _fd():
+    dir = $(find * -path '*/\.*' -prune \
+                   -o -type d -print 2> /dev/null | fzf +m)
+    os.chdir(dir)
+aliases["fd"] = _fd
