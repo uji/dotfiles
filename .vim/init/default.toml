@@ -17,6 +17,9 @@ hook_post_update = '''
 '''
 
 [[plugins]]
+repo = 'tpope/vim-surround'
+
+[[plugins]]
 repo = 'cohama/lexima.vim'
 
 [[plugins]]
