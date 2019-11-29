@@ -20,6 +20,9 @@ hook_post_update = '''
 repo = 'tpope/vim-surround'
 
 [[plugins]]
+repo = 'andymass/vim-matchup'
+
+[[plugins]]
 repo = 'cohama/lexima.vim'
 
 [[plugins]]
