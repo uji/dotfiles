@@ -28,10 +28,6 @@ repo = 'tpope/vim-rails'
 on_ft = ['ruby']
 
 [[plugins]]
-repo = 'thoughtbot/vim-rspec'
-on_ft = ['ruby']
-
-[[plugins]]
 repo = 'slim-template/vim-slim'
 on_ft = ['slim']
 
