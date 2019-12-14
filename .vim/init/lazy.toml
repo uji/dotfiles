@@ -1,16 +1,14 @@
 [[plugins]]
 repo = 'roxma/nvim-yarp'
-if = ''' ! has('nvim')'''
+if = '''! has('nvim')'''
 
 [[plugins]]
 repo = 'roxma/vim-hug-neovim-rpc'
-if = ''' ! has('nvim')'''
+if = '''! has('nvim')'''
 
 [[plugins]]
-repo = 'Shougo/context_filetype.vim'
-
-[[plugins]]
-repo = 'mattn/sonictemplate-vim'
+repo = 'skanehira/docker.vim'
+if = '''! has('nvim')'''
 
 [[plugins]]
 repo = 'Shougo/neomru.vim'

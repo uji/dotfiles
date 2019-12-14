@@ -68,8 +68,11 @@ repo = 'junegunn/fzf.vim'
 [[plugins]]
 repo = 'thinca/vim-quickrun'
 
-# [[plugins]]
-# repo = 'skanehira/docker.vim'
-
 [[plugins]]
 repo = 'arcticicestudio/nord-vim'
+
+[[plugins]]
+repo = 'mattn/sonictemplate-vim'
+
+[[plugins]]
+repo = 'kassio/neoterm'

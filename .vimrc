@@ -4,6 +4,7 @@ runtime! mapping/*.vim
 runtime! settings/*.vim
 runtime! colors/*.vim
 filetype plugin indent on
+set shell=bash
 
 set encoding=utf-8
 scriptencoding utf-8
