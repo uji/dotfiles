@@ -2,14 +2,10 @@
   "suggest.enablePreselect": true,
   "diagnostic.displayByAle": true,
   "languageserver":{
-    "golang":{
-      "command": "go-langserver",
-      "filetypes": ["go"],
-      "initializationOptions": {
-        "gocodeCompletionEnabled": true,
-        "diagnosticsEnabled": true,
-        "lintTool": "golint"
-      }
+    "golang": {
+      "command": "gopls",
+      "rootPatterns": ["go.mod"],
+      "filetypes": ["go"]
     },
     "elmLS": {
       "command": "elm-language-server",
