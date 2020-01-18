@@ -1,14 +1,14 @@
 [[plugins]]
 repo = 'roxma/nvim-yarp'
-if = '''! has('nvim')'''
+if = '! has("nvim")'
 
 [[plugins]]
 repo = 'roxma/vim-hug-neovim-rpc'
-if = '''! has('nvim')'''
+if = '! has("nvim")'
 
 [[plugins]]
 repo = 'skanehira/docker.vim'
-if = '''! has('nvim')'''
+if = '! has("nvim")'
 
 [[plugins]]
 repo = 'Shougo/neomru.vim'
@@ -25,6 +25,10 @@ hook_add = 'source ~/dotfiles/.vim/lazys/ruby.vim'
 
 [[plugins]]
 repo = 'tpope/vim-rails'
+on_ft = ['ruby']
+
+[[plugins]]
+repo = 'ujiprog/neoterm-rspec.vim'
 on_ft = ['ruby']
 
 [[plugins]]
