@@ -23,10 +23,7 @@ repo = 'tpope/vim-surround'
 repo = 'andymass/vim-matchup'
 
 [[plugins]]
-repo = 'cohama/lexima.vim'
-
-[[plugins]]
-repo = 'sheerun/vim-polyglot' # syntax highlight
+repo = 'sheerun/vim-polyglot'
 
 [[plugins]]
 repo = 'vim-airline/vim-airline'
@@ -35,7 +32,7 @@ repo = 'vim-airline/vim-airline'
 repo = 'vim-airline/vim-airline-themes'
 
 [[plugins]]
-repo = 'scrooloose/nerdtree' #ファイルツリー
+repo = 'scrooloose/nerdtree'
 
 [[plugins]]
 repo = 'jistr/vim-nerdtree-tabs'
@@ -58,9 +55,6 @@ repo = 'Yggdroot/indentLine'
 [[plugins]]
 repo = 'junegunn/fzf'
 build = './install --all'
-
-[[plugin]]
-repo = 'mattn/sonictemplate-vim'
 
 [[plugins]]
 repo = 'junegunn/fzf.vim'
