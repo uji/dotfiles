@@ -8,7 +8,7 @@ set -x PATH ~/.nodebrew/current/bin $PATH
 # GO
 set -x GOPATH $HOME/go $GOPATH
 set -x PATH $HOME/go/bin $PATH
-set -x GO111MODULE auto
+set -x GO111MODULE on
 
 #rbenv
 set -x PATH $HOME/.rbenv/bin $PATH
