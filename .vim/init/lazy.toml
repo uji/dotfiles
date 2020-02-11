@@ -28,7 +28,7 @@ repo = 'tpope/vim-rails'
 on_ft = ['ruby']
 
 [[plugins]]
-repo = 'ujiprog/neoterm-rspec.vim'
+repo = 'uji/neoterm-rspec.vim'
 on_ft = ['ruby']
 
 [[plugins]]
