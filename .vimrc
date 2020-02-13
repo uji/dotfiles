@@ -39,5 +39,5 @@ augroup save
 augroup END
 
 if executable('gof')
-  command! -nargs=* Gof term gof -t
+  command! -nargs=* Gof term ++close gof -t
 endif
