@@ -37,3 +37,7 @@ set nobackup
 augroup save
   autocmd BufWritePre * :%s/\s\+$//ge
 augroup END
+
+if executable('gof')
+  command! -nargs=* Gof term gof -t
+endif
