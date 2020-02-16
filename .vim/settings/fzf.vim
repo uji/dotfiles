@@ -1,7 +1,10 @@
 let g:fzf_action = {
   \ 'ctrl-s': 'split' }
 
-nnoremap <C-p> :FZFFileList<CR>
+if has("nvim")
+  nnoremap <C-p> :FZFFileList<CR>
+endif
+
 command! FZFFileList call fzf#run(fzf#wrap({
             \ 'source': 'find . -type d -name .git -prune -o ! -name .DS_Store',
             \ 'down': '40%'}))
