@@ -70,3 +70,6 @@ repo = 'mattn/sonictemplate-vim'
 
 [[plugins]]
 repo = 'kassio/neoterm'
+
+[[plugins]]
+repo = 'itchyny/vim-gof'
