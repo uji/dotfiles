@@ -19,6 +19,5 @@
       }
     }
   },
-  "codeLens.enable": true,
-  "solargraph.commandPath": "~/.rbenv/shims/solargraph"
+  "codeLens.enable": true
 }
