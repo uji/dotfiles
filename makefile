@@ -10,7 +10,7 @@ vim:
 		--enable-multibyte \
 		--enable-nls \
 		--enable-perlinterp \
-		--enable-python3interp --with-python3-command=/usr/local/bin/python3 \
+		--enable-python3interp --with-python3-command=`which python3` \
 		--enable-luainterp --with-lua-prefix=/usr/local \
 		--enable-cscope \
 		--enable-fail-if-missing=yes \
