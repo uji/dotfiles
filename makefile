@@ -1,5 +1,7 @@
 .PHONY: install
 install: link
+	go get github.com/mattn/gof
+	npm i -g yarn
 
 .PHONY: vim
 vim:
