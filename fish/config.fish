@@ -43,11 +43,6 @@ alias gl='env git log --graph --date=short --pretty=\"format:%C(yellow)%h %C(cya
 alias ga='env git add'
 alias gc='env git commit -m'
 
-function git_setting
-  git config user.name uji
-  git config user.email ujiprog@gmail.com
-end
-
 # docker
 alias dk="env docker"
 alias dc="env docker-compose"
