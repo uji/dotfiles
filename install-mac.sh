@@ -1,3 +1,4 @@
 #!/bin/sh
-go get github.com/mattn/gof
+sh ln.sh
 npm i -g yarn
+go get github.com/mattn/gof
