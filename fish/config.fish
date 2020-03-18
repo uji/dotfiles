@@ -22,8 +22,8 @@ for p in $PATH
 end
 set PATH $NEWPATH
 
-alias v="env nvim"
-alias vf="env nvim ~/.config/fish/config.fish"
+alias v="env vim"
+alias vf="env vim ~/.config/fish/config.fish"
 
 alias sf="env source ~/.config/fish/config.fish"
 alias pc="env pbcopy <"
