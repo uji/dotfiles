@@ -1,26 +1,4 @@
-set -x PATH /usr/local/bin $PATH
-set -U FZF_LEGACY_KEYBINDINGS 0
-
-# nodebrew PATH
-set -x PATH /usr/local/var/nodebrew/current/bin $PATH
-set -x PATH ~/.nodebrew/current/bin $PATH
-
-# GO
-set -x GOPATH $HOME/go $GOPATH
-set -x PATH $HOME/go/bin $PATH
-set -x GO111MODULE on
-
-#rbenv
-set -x PATH $HOME/.rbenv/bin $PATH
-set -x PATH $HOME/.rbenv/shims $PATH
-status --is-interactive; and source (rbenv init -|psub)
-set -l NEWPATH
-for p in $PATH
-  if not contains $NEWPATH $p
-    set NEWPATH $NEWPATH $p
-  end
-end
-set PATH $NEWPATH
+source ~/.profile.fish
 
 alias v="env vim"
 alias vf="env vim ~/.config/fish/config.fish"
