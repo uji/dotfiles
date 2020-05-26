@@ -5,7 +5,7 @@
 	<key>AdjustWindowForFontSizeChange</key>
 	<true/>
 	<key>AllowClipboardAccess</key>
-	<false/>
+	<true/>
 	<key>AppleAntiAliasingThreshold</key>
 	<integer>1</integer>
 	<key>AppleScrollAnimationEnabled</key>
@@ -76,13 +76,13 @@
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>520 561 400 129 0 0 1440 877 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>410 363 620 392 0 0 1440 877 </string>
+	<string>2090 302 620 392 1440 -214 1920 1080 </string>
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>393 432 918 423 0 0 1440 877 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>99 293 592 584 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 1440 900 0 0 1440 877 </string>
+	<string>1440 -214 1920 1080 1440 -214 1920 1057 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -736,7 +736,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>5D247677-0A4C-4E24-A897-56C758ED32B6</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>22</integer>
+	<integer>24</integer>
 	<key>NoSyncNextAnnoyanceTime</key>
 	<real>587615238.18501198</real>
 	<key>NoSyncOnboardingWindowHasBeenShown</key>
@@ -1467,15 +1467,16 @@
 	</dict>
 	<key>NoSyncSearchHistory2</key>
 	<array>
+		<string>qiita</string>
+		<string>quuta</string>
+		<string>postgres</string>
+		<string>UserAPIkjk</string>
 		<string>sonic</string>
 		<string>auth</string>
 		<string>permi</string>
 		<string>gate_devicejq</string>
 		<string>gate_dri</string>
 		<string>schedule</string>
-		<string>sync</string>
-		<string>Names</string>
-		<string>name</string>
 	</array>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>581398368.95225406</real>
@@ -1527,7 +1528,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-05-05T20:35:50Z</date>
+	<date>2020-05-25T14:50:24Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>
@@ -1535,7 +1536,7 @@
 	<key>SoundForEsc</key>
 	<false/>
 	<key>UKCrashReporterLastCrashReportDate</key>
-	<real>1581753984</real>
+	<real>1588711296</real>
 	<key>UseLionStyleFullscreen</key>
 	<false/>
 	<key>VisualIndicatorForEsc</key>
