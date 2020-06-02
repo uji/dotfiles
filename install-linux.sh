@@ -1,2 +1,3 @@
 #!/bin/sh
-sh ln.sh
+sh ~/dotfiles/commom.sh
+sh ~/dotfiles/ln.sh
