@@ -1,3 +1,4 @@
 [submodule "vimrc"]
 	path = vimrc
 	url = https://github.com/uji/vimrc.git
+  branch = master
