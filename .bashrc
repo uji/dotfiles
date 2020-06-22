@@ -16,7 +16,7 @@ alias gs='git status -sb'
 alias gco='git checkout'
 alias gp='git pull'
 alias gd='git diff'
-alias gl='git log --graph --date=short --pretty=\"format:%C(yellow)%h %C(cyan)%ad %C(green)%an%Creset%x09%s %C(red)%d%Creset\"'
+alias gl='git log --graph --date=short'
 alias ga='git add'
 alias gc='git commit -m'
 
