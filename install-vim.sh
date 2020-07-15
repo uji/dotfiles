@@ -1,6 +1,6 @@
 #!/bin/sh
 rm -rf ~/tmp/vim
-git clone https://github.com/vim/vim.git ~/tmp/vim
+git clone --depth 1 https://github.com/vim/vim.git ~/tmp/vim
 cd ~/tmp/vim && ./configure \
   --prefix=/usr/local \
   --enable-multibyte \
