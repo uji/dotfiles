@@ -60,3 +60,10 @@ fchr() {
            fzf-tmux -d $(( 2 + $(wc -l <<< "$branches") )) +m) &&
   git checkout $(echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
 }
+
+# docker exec bash by fzf
+dbash() {
+  local name
+  name=$(docker ps --format "{{.Names}}" | fzf)
+  docker exec -it $name bash
+}
