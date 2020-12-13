@@ -35,7 +35,7 @@ alias rar="env bin/rails routes"
 alias ram="env bin/rails db:migrate"
 alias rasp="env bin/rspec"
 
-function docker-exec
+function dbash
   set name (docker ps --format "{{.Names}}" | fzf)
-  docker exec -it $name $argv
+  docker exec -it $name bash
 end
