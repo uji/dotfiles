@@ -10,7 +10,7 @@ curl -s https://api.github.com/repos/uji/ujivim/releases/latest \
 | tr -d \" \
 | xargs curl -o ~/ujivim.tar.gz -L
 
-tar -zxvf ~/ujivim.tar.gz -C ~
+tar -zxvf ~/ujivim.tar.gz -C ~/
 
 sh ~/dotfiles/common.sh
 sh ~/dotfiles/ln.sh
