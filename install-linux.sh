@@ -11,8 +11,8 @@ curl -s https://api.github.com/repos/uji/ujivim/releases/latest \
 | xargs curl -o ~/ujivim.tar.gz -L
 
 tar -zxvf ~/ujivim.tar.gz -C ~/
-echo export PATH=$HOME/ujivim/bin:$PATH >> ~/.bash_profile
-source ~/.bash_profile
+echo export PATH=$PATH:$HOME/ujivim/bin >> ~/.bash_profile
+echo export VIM=$HOME/ujivim/share/vim >> ~/.bash_profile
 
 sh ~/dotfiles/common.sh
 sh ~/dotfiles/ln.sh
