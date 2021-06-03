@@ -16,4 +16,8 @@ echo export VIM=$HOME/ujivim/share/vim >> ~/.bash_profile
 
 sh ~/dotfiles/common.sh
 sh ~/dotfiles/ln.sh
-sh ~/dotfiles/install-vimpack.sh
+
+export VIM=$HOME/ujivim/share/vim
+$HOME/ujivim/bin/vim -c 'call minpac#clean()' \
+    -c 'call minpac#update("", {"do": "quit"})' \
+    -c ':q'
