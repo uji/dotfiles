@@ -26,3 +26,7 @@ ln -sf ~/dotfiles/vimrc/vim ~/.config/nvim
 ln -sf ~/dotfiles/vimrc/.vimrc ~/.config/nvim/init.vim
 ln -sf ~/dotfiles/.bashrc ~/.bashrc
 ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
+
+vim -c 'call minpac#clean()' \
+    -c 'call minpac#update("", {"do": "quit"})' \
+    -c ':q'
