@@ -7,7 +7,6 @@ use_package_manager() {
     brew install vim
     brew install tmux
   elif type "apt-get" > /dev/null 2>&1; then
-    apt-get update
     apt-get install -y vim
   else
     echo "Your os is not supported."
