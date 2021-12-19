@@ -1,4 +1,4 @@
-source ~/.bash_env
+source ~/.bash_local
 alias v='vim'
 alias nv='nvim'
 alias vf='vim ~/.config/fish/config.fish'
