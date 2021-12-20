@@ -7,21 +7,19 @@ use_package_manager() {
     brew install vim
     brew install tmux
   elif type "apt-get" > /dev/null 2>&1; then
-    apt-get install -y libncurses5-dev
-
-    # install ujivim
-    curl -s https://api.github.com/repos/uji/ujivim/releases/latest \
-    | grep "browser_download_url.*linux-amd64.tar.gz" \
+    curl -s https://api.github.com/repos/neovim/neovim/releases/latest \
+    | grep "browser_download_url.*nvim.appimage\"" \
     | cut -d : -f 2,3 \
     | tr -d \" \
-    | xargs curl -o ~/ujivim.tar.gz -L
-    tar -zxvf ~/ujivim.tar.gz -C ~/
-    echo export PATH=$PATH:$HOME/ujivim/bin >> ~/.bash_local
-    echo export VIM=$HOME/ujivim/share/vim >> ~/.bash_local
+    | xargs curl -o ~/nvim.appimage -L
+    ~/nvim.appimage --appimage-extract
+    echo export PATH=$PATH:$HOME/squashfs-root/usr/bin >> ~/.bash_local
   else
     echo "Your os is not supported."
   fi
 }
+
+touch ~/.bash_local
 
 use_package_manager
 
