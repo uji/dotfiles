@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 set -e
 
 use_package_manager() {
@@ -34,7 +34,7 @@ ln -sf ~/dotfiles/vimrc/.vimrc ~/.config/nvim/init.vim
 ln -sf ~/dotfiles/.bashrc ~/.bashrc
 ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
 
-source ~/.bashrc
+. ~/.bashrc
 
 if type "nvim" > /dev/null 2>&1; then
   nvim -c 'call minpac#clean()' \
