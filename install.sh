@@ -4,7 +4,7 @@ set -e
 touch ~/.bash_local
 
 if type "brew" > /dev/null 2>&1; then
-  brew install vim
+  brew install neovim
   brew install tmux
 elif type "apt-get" > /dev/null 2>&1; then
   curl -s https://api.github.com/repos/neovim/neovim/releases/latest \
@@ -16,7 +16,7 @@ elif type "apt-get" > /dev/null 2>&1; then
   ~/nvim.appimage --appimage-extract
   echo export PATH=$PATH:$HOME/squashfs-root/usr/bin >> ~/.bash_local
 else
-  echo "Your os is not supported."
+  echo "required brew or apt-get."
 fi
 
 git clone https://github.com/uji/vimrc.git ~/dotfiles/vimrc
