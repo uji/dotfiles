@@ -1,15 +1,11 @@
 . ~/.bash_local
 alias v='vim'
 alias nv='nvim'
-alias vf='vim ~/.config/fish/config.fish'
 
-alias sf='source ~/.config/fish/config.fish'
 alias pc='pbcopy <'
 alias l='ls -ltr'
 alias la='ls -a'
 alias ll='ls -l'
-alias p='python3'
-alias pip='pip3'
 
 # git
 alias g='git'
@@ -25,14 +21,6 @@ alias gc='git commit -m'
 alias dk='docker'
 alias dc='docker-compose'
 alias dcp='docker-compose ps'
-
-# rails
-alias ra='bin/rails'
-alias ras='bin/rails s'
-alias rac='bin/rails c'
-alias rar='bin/rails routes'
-alias ram='bin/rails db:migrate'
-alias rasp='bin/rspec'
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
