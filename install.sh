@@ -14,7 +14,8 @@ elif type "apt-get" > /dev/null 2>&1; then
   | xargs curl -o ~/nvim.appimage -L
   chmod u+x ~/nvim.appimage
   ~/nvim.appimage --appimage-extract
-  echo export PATH=$PATH:$HOME/squashfs-root/usr/bin >> ~/.bash_local
+  mv squashfs-root $HOME/neovim
+  echo export PATH=$PATH:$HOME/neovim/usr/bin >> ~/.bash_local
 else
   echo "required brew or apt-get."
 fi
