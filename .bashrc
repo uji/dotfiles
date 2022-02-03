@@ -53,6 +53,13 @@ fchr() {
 # docker exec bash by fzf
 dbash() {
   local name
-  name=$(docker ps --format "{{.Names}}" | fzf)
+  name=$(docker ps --format "{{.Names}}" | fzf-tmux)
   docker exec -it $name bash
+}
+
+# cd git repository by fzf
+fghq() {
+  local repo
+  repo=$(ghq list | fzf-tmux)
+  cd $(ghq root)/$repo
 }
