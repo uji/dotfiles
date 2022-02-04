@@ -19,8 +19,8 @@ alias gc='git commit -m'
 
 # docker
 alias dk='docker'
-alias dc='docker-compose'
-alias dcp='docker-compose ps'
+alias dc='docker compose'
+alias dcp='docker compose ps'
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
