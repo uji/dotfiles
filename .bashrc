@@ -59,8 +59,9 @@ dbash() {
 }
 
 # cd git repository by fzf
-fghq() {
+_fzf_ghq() {
   local repo
   repo=$(ghq list | fzf-tmux)
   cd $(ghq root)/$repo
 }
+bind -x '"\C-g": _fzf_ghq'
