@@ -23,6 +23,7 @@ alias dc='docker compose'
 alias dcp='docker compose ps'
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+[ -d /usr/share/bash-completion ] && source /usr/share/bash-completion/bash_completion
 
 # cd dir by fzf
 fd() {

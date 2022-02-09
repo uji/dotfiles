@@ -3,6 +3,8 @@ set -e
 
 touch ~/.bash_local
 
+[ ! -d /usr/share/bash-completion ] && git clone --depth 1 https://github.com/scop/bash-completion.git /usr/share/bash-completion
+
 if type "brew" > /dev/null 2>&1; then
   brew install neovim
   brew install tmux
