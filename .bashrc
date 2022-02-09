@@ -65,4 +65,5 @@ _fzf_ghq() {
   cd $(ghq root)/$repo
 }
 bind -x '"\C-g": _fzf_ghq'
-export PS1='\[\e[0;36;49m\]uji shell\[\e[0;39;49m\]:@\h:\[\e[0;36;49m\]\w \[\e[0;39;49m\]$ '
+
+export PS1='\[\e[0;36;49m\]uji\[\e[0;39;49m\]:@\h:\[\e[0;36;49m\]\w \[\e[0;39;49m\]$ '
