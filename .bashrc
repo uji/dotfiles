@@ -66,4 +66,10 @@ _fzf_ghq() {
 }
 bind -x '"\C-g": _fzf_ghq'
 
+_fzf_history() {
+  local cmd
+  eval $(history | sed 's/ *[0-9]* *//' | awk '!a[$0]++' | fzf-tmux)
+}
+bind -x '"\C-r": _fzf_history'
+
 export PS1='\[\e[0;36;49m\]uji\[\e[0;39;49m\]:@\h:\[\e[0;36;49m\]\w \[\e[0;39;49m\]$ '
