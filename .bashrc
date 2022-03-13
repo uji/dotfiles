@@ -1,3 +1,4 @@
+. ~/dotfiles/git-prompt.sh
 . ~/.bash_local
 alias v='vim'
 alias nv='nvim'
@@ -74,4 +75,4 @@ _fzf_history() {
 }
 bind -x '"\C-r": _fzf_history'
 
-export PS1='\[\e[0;36;49m\]uji\[\e[0;39;49m\]:@\h:\[\e[0;36;49m\]\w \[\e[0;39;49m\]$ '
+export PS1='\[\e[0;36;49m\]uji\[\e[0;39;49m\]:\w \[\e[0;32;49m\]$(__git_ps1 "%s")\[\e[0;36;49m\] $\[\e[0;39;49m\] '
