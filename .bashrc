@@ -75,4 +75,9 @@ _fzf_history() {
 }
 bind -x '"\C-r": _fzf_history'
 
-export PS1='\[\e[0;36;49m\]uji\[\e[0;39;49m\]:\w \[\e[0;32;49m\]$(__git_ps1 "%s")\[\e[0;36;49m\] $\[\e[0;39;49m\] '
+PS1_USER='\[\e[1;39;46m\]'
+PS1_DIR='\[\e[1;39;44m\]'
+PS1_GIT='\[\e[1;39;46m\]'
+PS1_BLUE='\[\e[0;34;49m\]'
+PS1_WHITE='\[\e[0;39;49m\]'
+export PS1=$PS1_USER' uji '$PS1_DIR' \w '$PS1_GIT$(__git_ps1 " %s ")$PS1_BLUE' $'$PS1_WHITE' '
