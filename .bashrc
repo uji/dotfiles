@@ -67,7 +67,10 @@ _fzf_ghq() {
 bind -x '"\C-g": _fzf_ghq'
 
 _fzf_history() {
-  eval $(history | sed 's/ *[0-9]* *//' | awk '!a[$0]++' | fzf-tmux)
+  local output
+  output=$(history | sed 's/ *[0-9]* *//' | awk '!a[$0]++' | fzf-tmux)
+  READLINE_LINE=$output
+  READLINE_POINT=0x7fffffff
 }
 bind -x '"\C-r": _fzf_history'
 
