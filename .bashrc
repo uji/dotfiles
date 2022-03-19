@@ -24,7 +24,7 @@ alias dc='docker compose'
 alias dcp='docker compose ps'
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-[ -d /usr/share/bash-completion ] && source /usr/share/bash-completion/bash_completion
+[ -f /usr/share/bash-completion/bash_completion ] && source /usr/share/bash-completion/bash_completion
 
 # cd dir by fzf
 fd() {
@@ -60,12 +60,11 @@ dbash() {
 }
 
 # cd git repository by fzf
-_fzf_ghq() {
+fghq() {
   local repo
   repo=$(ghq list | fzf-tmux)
   cd $(ghq root)/$repo
 }
-bind -x '"\C-g": _fzf_ghq'
 
 _fzf_history() {
   local output
