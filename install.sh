@@ -26,6 +26,8 @@ fi
 git clone https://github.com/uji/vimrc.git ~/dotfiles/vimrc
 sh ~/dotfiles/vimrc/install.sh
 
+cp ~/dotfiles/.tmux.conf.local.sample ~/.tmux.conf.local
+
 mkdir -p ~/.config
 ln -sf ~/dotfiles/vimrc/.vimrc ~/.vimrc
 ln -sf ~/dotfiles/vimrc/vim ~/.vim
