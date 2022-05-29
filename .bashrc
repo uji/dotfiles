@@ -75,7 +75,7 @@ _fzf_history() {
 bind -x '"\C-r": _fzf_history'
 
 PS1_USER="\[\e[1;39;46m\] \h "
-PS1_DIR="\[\e[1;39;44m\] \w "
+PS1_DIR="\[\e[1;39;44m\] \W "
 PS1_GIT='\[\e[1;39;46m\]$(__git_ps1 " %s ")'
 PS1_BLUE="\[\e[0;34;49m\] $ "
 PS1_WHITE="\[\e[0;39;49m\]"
