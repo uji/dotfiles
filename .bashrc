@@ -11,17 +11,16 @@ alias ll='ls -l'
 # git
 alias g='git'
 alias gs='git status -sb'
-alias gco='git checkout'
+alias gch='git checkout'
 alias gp='git pull'
 alias gd='git diff'
 alias gl='git log --graph --date=short'
 alias ga='git add'
-alias gc='git commit -m'
+alias gc='git commit'
 
 # docker
-alias dk='docker'
+alias d='docker'
 alias dc='docker compose'
-alias dcp='docker compose ps'
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 [ -f /usr/share/bash-completion/bash_completion ] && source /usr/share/bash-completion/bash_completion
