@@ -11,10 +11,8 @@ alias ll='ls -l'
 alias g='git'
 alias gs='git status -sb'
 alias gch='git checkout'
-alias gpull='git pull'
-alias gpush='git pull'
 alias gd='git diff'
-alias gl='git log --graph --date=short'
+alias gl="git log --graph --pretty=format:'%Cblue%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias ga='git add'
 alias gc='git commit'
 
