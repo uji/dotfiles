@@ -65,14 +65,6 @@ fghq() {
   cd $(ghq root)/$repo
 }
 
-_fzf_history() {
-  local output
-  output=$(history | sed 's/ *[0-9]* *//' | awk '!a[$0]++' | fzf-tmux)
-  READLINE_LINE=$output
-  READLINE_POINT=0x7fffffff
-}
-bind -x '"\C-r": _fzf_history'
-
 PS1_USER="\[\e[1;39;46m\] \h "
 PS1_DIR="\[\e[1;39;44m\] \W "
 PS1_GIT='\[\e[1;39;46m\]$(__git_ps1 " %s ")'
