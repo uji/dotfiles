@@ -1,6 +1,6 @@
 . ~/dotfiles/git-prompt.sh
 . ~/.bash_local
-alias v='vim'
+alias v='nvim'
 
 alias l='ls -ltr'
 alias la='ls -a'
