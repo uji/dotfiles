@@ -2,6 +2,7 @@
 
 - git
 - vim/neovim
+- xsel(other than MacOS)
 
 ### Options
 
