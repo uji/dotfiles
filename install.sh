@@ -1,21 +1,21 @@
 #!/bin/bash
 set -eu
 
-DOTFILES_DIR="${HOME}/dotfiles"
+readonly -r DOTFILES_DIR="${HOME}/dotfiles"
 
 git clone https://github.com/uji/dotfiles.git ${DOTFILES_DIR}
 [ ! -d /usr/share/bash-completion ] && git clone --depth 1 https://github.com/scop/bash-completion.git /usr/share/bash-completion
 
 # copy local setting files
-cp ~/dotfiles/.tmux.conf.local.sample ~/.tmux.conf.local
+cp "${DOTFILES_DIR}/.tmux.conf.local.sample" "${HOME}/.tmux.conf.local"
 
 # create symbolic link
-mkdir -p ~/.config
-ln -sf ~/dotfiles/vimrc/.vimrc ~/.vimrc
-ln -sf ~/dotfiles/vimrc/vim ~/.vim
-ln -sf ~/dotfiles/vimrc/vim ~/.config/nvim
-ln -sf ~/dotfiles/vimrc/.vimrc ~/.config/nvim/init.vim
-ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
+mkdir -p "${HOME}/.config"
+ln -sf "${DOTFILES_DIR}/vimrc/vim ${HOME}/.vim"
+ln -sf "${DOTFILES_DIR}/vimrc/vim ${HOME}/.config/nvim"
+ln -sf "${DOTFILES_DIR}/vimrc/.vimrc ${HOME}/.vimrc"
+ln -sf "${DOTFILES_DIR}/vimrc/.vimrc ${HOME}/.config/nvim/init.vim"
+ln -sf "${DOTFILES_DIR}/.tmux.conf ${HOME}/.tmux.conf"
 
 # install vim/neovim packages
 mkdir -p "${DOTFILES_DIR}/vimrc/vim/pack/mypackage/opt"
@@ -33,5 +33,5 @@ else
       -c ':q'
 fi
 
-# source from ~/.bashrc
-echo "source ${DOTFILES_DIR}/bashrc" >> ~/.bashrc
+# source from "${HOME}/.bashrc"
+echo "source ${DOTFILES_DIR}/bashrc" >> "${HOME}/.bashrc"
