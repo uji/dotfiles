@@ -5,24 +5,6 @@ touch ~/.bash_local
 
 [ ! -d /usr/share/bash-completion ] && git clone --depth 1 https://github.com/scop/bash-completion.git /usr/share/bash-completion
 
-if type "brew" > /dev/null 2>&1; then
-  brew install neovim
-  brew install tmux
-elif type "apt-get" > /dev/null 2>&1; then
-  curl -s https://api.github.com/repos/neovim/neovim/releases/latest \
-  | grep "browser_download_url.*nvim.appimage\"" \
-  | cut -d : -f 2,3 \
-  | tr -d \" \
-  | xargs curl -o ~/nvim.appimage -L
-  chmod u+x ~/nvim.appimage
-  ~/nvim.appimage --appimage-extract
-  mv squashfs-root /usr/local/neovim
-  echo export PATH=\"$PATH:/usr/local/neovim/usr/bin\" >> ~/.bash_local
-  rm ~/nvim.appimage
-else
-  echo "required brew or apt-get."
-fi
-
 git clone https://github.com/uji/vimrc.git ~/dotfiles/vimrc
 sh ~/dotfiles/vimrc/install.sh
 
