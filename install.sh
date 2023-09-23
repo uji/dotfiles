@@ -11,11 +11,11 @@ cp "${DOTFILES_DIR}/.tmux.conf.local.sample" "${HOME}/.tmux.conf.local"
 
 # create symbolic link
 mkdir -p "${HOME}/.config"
-ln -sf "${DOTFILES_DIR}/vimrc/vim ${HOME}/.vim"
-ln -sf "${DOTFILES_DIR}/vimrc/vim ${HOME}/.config/nvim"
-ln -sf "${DOTFILES_DIR}/vimrc/.vimrc ${HOME}/.vimrc"
-ln -sf "${DOTFILES_DIR}/vimrc/.vimrc ${HOME}/.config/nvim/init.vim"
-ln -sf "${DOTFILES_DIR}/.tmux.conf ${HOME}/.tmux.conf"
+ln -sf "${DOTFILES_DIR}/vimrc/vim" "${HOME}/.vim"
+ln -sf "${DOTFILES_DIR}/vimrc/vim" "${HOME}/.config/nvim"
+ln -sf "${DOTFILES_DIR}/vimrc/.vimrc" "${HOME}/.vimrc"
+ln -sf "${DOTFILES_DIR}/vimrc/.vimrc" "${HOME}/.config/nvim/init.vim"
+ln -sf "${DOTFILES_DIR}/.tmux.conf" "${HOME}/.tmux.conf"
 
 # install vim/neovim packages
 mkdir -p "${DOTFILES_DIR}/vimrc/vim/pack/mypackage/opt"
