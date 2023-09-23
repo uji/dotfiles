@@ -1,6 +1,16 @@
+## Required
+
+- git
+- vim/neovim
+
+### Options
+
+- tmux
+
 ## Install
 
 e.g. (ubuntu)
 
 ```
-git clone --depth 1 https://github.com/uji/dotfiles.git ~/dotfiles && bash ~/dotfiles/install.sh && . ~/.bashrc
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/uji/dotfiles/master/install.sh)"
+```

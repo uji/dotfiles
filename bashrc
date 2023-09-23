@@ -1,5 +1,4 @@
 . ~/dotfiles/git-prompt.sh
-. ~/.bash_local
 alias v='nvim'
 
 alias l='ls -ltr'
