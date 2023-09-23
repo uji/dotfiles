@@ -1,7 +1,7 @@
 #!/bin/bash
 set -eu
 
-readonly -r DOTFILES_DIR="${HOME}/dotfiles"
+readonly DOTFILES_DIR="${HOME}/dotfiles"
 
 git clone https://github.com/uji/dotfiles.git ${DOTFILES_DIR}
 [ ! -d /usr/share/bash-completion ] && git clone --depth 1 https://github.com/scop/bash-completion.git /usr/share/bash-completion
