@@ -1,11 +1,10 @@
-. ~/dotfiles/git-prompt.sh
+# set alias
 alias v='nvim'
 
 alias l='ls -ltr'
 alias la='ls -a'
 alias ll='ls -l'
 
-# git
 alias g='git'
 alias gs='git status -sb'
 alias gch='git checkout'
@@ -14,7 +13,6 @@ alias gl="git log --graph --pretty=format:'%Cblue%h%Creset -%C(yellow)%d%Creset 
 alias ga='git add'
 alias gc='git commit'
 
-# docker
 alias d='docker'
 alias dc='docker compose'
 
@@ -60,6 +58,9 @@ fghq() {
   repo=$(ghq list | fzf-tmux)
   cd $(ghq root)/$repo
 }
+
+# prompt settings
+source ~/dotfiles/git-prompt.sh
 
 PS1_USER="\[\e[1;39;46m\] \h "
 PS1_DIR="\[\e[1;39;44m\] \W "
