@@ -4,7 +4,7 @@ set -eu
 readonly DOTFILES_DIR="${HOME}/dotfiles"
 
 git clone https://github.com/uji/dotfiles.git ${DOTFILES_DIR}
-[ ! -d /usr/share/bash-completion ] && git clone --depth 1 https://github.com/scop/bash-completion.git /usr/share/bash-completion
+[ ! -d "${HOME}/bash-completion" ] && git clone --depth 1 https://github.com/scop/bash-completion.git "${HOME}/bash-completion"
 
 # copy local setting files
 cp "${DOTFILES_DIR}/.tmux.conf.local.sample" "${HOME}/.tmux.conf.local"
