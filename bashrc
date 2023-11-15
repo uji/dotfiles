@@ -17,7 +17,7 @@ alias d='docker'
 alias dc='docker compose'
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-[ -f /usr/share/bash-completion/bash_completion ] && source /usr/share/bash-completion/bash_completion
+[ -f "${HOME}/bash-completion" ] && source "${HOME}/bash-completion"
 
 # cd dir by fzf
 fd() {
