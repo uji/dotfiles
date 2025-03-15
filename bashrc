@@ -62,7 +62,7 @@ fghq() {
 # prompt settings
 source ~/dotfiles/git-prompt.sh
 
-PS1_USER="\[\e[1;39;46m\] \h "
+PS1_USER="\[\e[1;39;46m\] \h@\u "
 PS1_DIR="\[\e[1;39;44m\] \W "
 PS1_GIT='\[\e[1;39;46m\]$(__git_ps1 " %s ")'
 PS1_BLUE="\[\e[0;34;49m\] $ "
