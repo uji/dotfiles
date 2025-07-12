@@ -34,3 +34,5 @@ else
       -c ':q'
 fi
 
+# install tpm
+[ ! -d ~/tmux/plugins/tpm ] && git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
