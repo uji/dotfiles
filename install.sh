@@ -3,11 +3,13 @@ set -eu
 
 readonly DOTFILES_DIR="${HOME}/dotfiles"
 
-git clone https://github.com/uji/dotfiles.git ${DOTFILES_DIR}
+[ ! -d ${DOTFILES_DIR} ] && \
+  git clone https://github.com/uji/dotfiles.git ${DOTFILES_DIR} && \
+  echo "source ${DOTFILES_DIR}/bashrc" >> "${HOME}/.bashrc"
 [ ! -d "${HOME}/bash-completion" ] && git clone --depth 1 https://github.com/scop/bash-completion.git "${HOME}/bash-completion"
 
 # copy local setting files
-cp "${DOTFILES_DIR}/.tmux.conf.local.sample" "${HOME}/.tmux.conf.local"
+[ ! -d ${HOME}/.tmux.conf.local ] && cp "${DOTFILES_DIR}/.tmux.conf.local.sample" "${HOME}/.tmux.conf.local"
 
 # create symbolic link
 mkdir -p "${HOME}/.config"
@@ -19,7 +21,7 @@ ln -sf "${DOTFILES_DIR}/.tmux.conf" "${HOME}/.tmux.conf"
 
 # install vim/neovim packages
 mkdir -p "${DOTFILES_DIR}/vimrc/vim/pack/mypackage/opt"
-git clone https://github.com/k-takata/minpac.git "${DOTFILES_DIR}/vimrc/vim/pack/mypackage/opt/minpac"
+[ ! -d ${DOTFILES_DIR}/vimrc/vim/pack/mypackage/opt/minpac ] && git clone https://github.com/k-takata/minpac.git "${DOTFILES_DIR}/vimrc/vim/pack/mypackage/opt/minpac"
 
 if type "nvim" > /dev/null 2>&1; then
   git config --global core.editor nvim
@@ -33,5 +35,3 @@ else
       -c ':q'
 fi
 
-# source from "${HOME}/.bashrc"
-echo "source ${DOTFILES_DIR}/bashrc" >> "${HOME}/.bashrc"
