@@ -13,6 +13,8 @@ alias gl="git log --graph --pretty=format:'%Cblue%h%Creset -%C(yellow)%d%Creset 
 alias ga='git add'
 alias gc='git commit'
 
+alias lg='lazygit'
+
 alias d='docker'
 alias dc='docker compose'
 
