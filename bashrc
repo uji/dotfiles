@@ -16,6 +16,9 @@ alias gc='git commit'
 alias d='docker'
 alias dc='docker compose'
 
+export HISTSIZE=10000
+export HISTFILESIZE=10000
+
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # cd dir by fzf
