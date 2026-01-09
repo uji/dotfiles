@@ -7,6 +7,8 @@
 ### Options
 
 - tmux
+- ripgrep
+- fzf
 
 ## Install
 

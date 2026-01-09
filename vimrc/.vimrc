@@ -43,3 +43,19 @@ set nobackup
 augroup save
   autocmd BufWritePre * :%s/\s\+$//ge
 augroup END
+
+"quickfix
+autocmd FileType qf nnoremap <buffer> <CR> <CR>:cclose<CR>
+
+"grep
+call system('git rev-parse --is-inside-work-tree')
+if v:shell_error == 0
+  let &grepprg = 'git grep -I --line-number --column'
+  set grepformat=%f:%l:%c:%m
+elseif executable('rg')
+  let &grepprg = 'rg --vimgrep --smart-case --hidden'
+  set grepformat=%f:%l:%c:%m
+endif
+autocmd QuickFixCmdPost *grep* cwindow
+command! -nargs=+ Grep silent! grep! <args>
+
