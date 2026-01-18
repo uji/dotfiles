@@ -12,3 +12,5 @@ call minpac#add('prabirshrestha/vim-lsp')
 call minpac#add('mattn/vim-lsp-settings')
 call minpac#add('easymotion/vim-easymotion')
 call minpac#add('vim-test/vim-test')
+"when develop with ssh remote url, run `git remote set-url origin git@github.com:uji/vim-github-url.git`
+call minpac#add('uji/vim-github-url')
