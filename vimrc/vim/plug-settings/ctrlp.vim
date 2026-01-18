@@ -4,3 +4,6 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\v\.(exe|so|dll)$',
   \ 'link': 'some_bad_symbolic_links',
   \ }
+
+nmap <Leader>b :CtrlPBuffer<CR>
+nmap <Leader>m :CtrlPMRUFiles<CR>
