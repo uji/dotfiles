@@ -1,11 +1,18 @@
 {
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
   "permissions": {
     "allow": [
-      "WebFetch(domain:github.com)"
+      "Bash(grep:*)",
+      "Bash(find:*)",
+      "Bash(ls:*)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:www.npmjs.com)",
+      "WebSearch"
     ]
   },
   "enabledPlugins": {
     "frontend-design@claude-plugins-official": true,
     "example-skills@anthropic-agent-skills": true
-  }
+  },
+  "language": "japanese"
 }

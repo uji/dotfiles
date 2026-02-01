@@ -18,7 +18,8 @@ ln -sf "${DOTFILES_DIR}/vimrc/.vimrc" "${HOME}/.vimrc"
 ln -sf "${DOTFILES_DIR}/vimrc/.vimrc" "${HOME}/.config/nvim/init.vim"
 ln -sf "${DOTFILES_DIR}/.tmux.conf" "${HOME}/.tmux.conf"
 ln -sf "${DOTFILES_DIR}/ghostty" "${HOME}/.config/ghostty"
-ln -sf "${DOTFILES_DIR}/.claude" "${HOME}/.claude"
+mkdir -p "${HOME}/.claude"
+ln -sf "${DOTFILES_DIR}/.claude/settings.json" "${HOME}/.claude/settings.json"
 
 # install vim/neovim packages
 mkdir -p "${DOTFILES_DIR}/vimrc/vim/pack/mypackage/opt"
