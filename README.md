@@ -7,6 +7,7 @@
 ### Options
 
 - tmux
+- tcmux
 - ripgrep
 - fzf
 
