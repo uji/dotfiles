@@ -5,13 +5,15 @@
       "Bash(grep:*)",
       "Bash(find:*)",
       "Bash(ls:*)",
+      "Bash(sed:*)",
+      "Bash(mkdir:*)",
+      "Bash(git add:*)",
       "WebFetch(domain:github.com)",
       "WebFetch(domain:www.npmjs.com)",
       "WebSearch"
     ]
   },
   "enabledPlugins": {
-    "frontend-design@claude-plugins-official": true,
     "example-skills@anthropic-agent-skills": true
   },
   "language": "japanese"
