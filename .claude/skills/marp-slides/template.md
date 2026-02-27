@@ -20,30 +20,6 @@ style: |
    *   Body: "Helvetica Neue", Helvetica, "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif
    *   Base size: 28px
    */
-  section.title {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-  }
-  section.title h1 {
-    font-size: 2.2em;
-  }
-  section.title h2 {
-    font-size: 1.2em;
-    position: absolute;
-    bottom: 130px;
-    left: 0;
-    right: 0;
-    padding: 0 78.5px;
-  }
-  section.title p {
-    position: absolute;
-    bottom: 80px;
-    left: 0;
-    right: 0;
-    padding: 0 78.5px;
-  }
   section {
     font-family: "Helvetica Neue", Helvetica, "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
     font-size: 28px;
@@ -54,7 +30,6 @@ style: |
   section h1 { color: #000000; }
   section h2 { color: #000000; }
   section strong { color: #4285f4; }
-  section.title strong { color: inherit; }
   section a { color: #0097a7; }
   section pre { background-color: #f4f6f6; }
   header {
@@ -75,6 +50,31 @@ style: |
   pre code {
     font-size: 0.85em;
   }
+  /* Title slide */
+  section.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+  }
+  section.title h1 {
+    font-size: 2.2em;
+  }
+  section.title h2,
+  section.title p {
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: 0 78.5px;
+  }
+  section.title h2 {
+    font-size: 1.2em;
+    bottom: 130px;
+  }
+  section.title p {
+    bottom: 80px;
+  }
+  section.title strong { color: inherit; }
   /* Background image slides */
   section.bg-image {
     color: #ffffff;
