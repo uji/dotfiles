@@ -23,41 +23,30 @@ brew install marp-cli
 
 ## フロントマターテンプレート
 
-新規スライド作成時は以下のフロントマターを使用する:
+新規スライド作成時は、このスキルの `template.md` をコピーしてベースにする。`template.md` にはフロントマターと `style:` ブロックにデザイン定義が含まれている。
 
-```yaml
----
-marp: true
-theme: uji
-paginate: true
-header: "ヘッダーテキスト"
-footer: "フッターテキスト"
----
-```
-
-`style:` ブロックは使用しない。デザインはすべてカスタムテーマ `uji` で管理する。
+スライドごとにスタイルを個別調整する場合は、コピーした `style:` ブロック内を直接編集する。
 
 ## ビルドコマンド
 
-このスキルの `theme.css` を `--theme-set` オプションに指定してビルドする。パスはこの SKILL.md と同じディレクトリにある `theme.css` の絶対パスに解決すること。
-
 ```bash
-marp --theme-set <theme.css の絶対パス> slides.md
+marp slides.md
 ```
 
 PDF 出力する場合:
 
 ```bash
-marp --theme-set <theme.css の絶対パス> slides.md -o slides.pdf
+marp slides.md -o slides.pdf
 ```
 
 ## デザイン検証
 
 スライド生成後、エージェントはデザインを検証するために以下の手順を実施する:
 
-1. **画像出力でエージェント自身が確認**: `marp --theme-set <theme.css の絶対パス> slides.md --images png` で各スライドを PNG 画像として出力し、Read ツールで画像を読み取ってレイアウト・配色・可読性を確認する
-2. **プレビューを起動して目視確認を依頼**: `marp --theme-set <theme.css の絶対パス> -p slides.md` でプレビューを開き、ユーザーに確認してもらう
-3. 問題があれば修正し、再度ビルド・検証を行う
+1. **画像を出力してブラウザで確認**: `marp --images png *.md -o /tmp/**/*.png` で画像を出力し確認
+2. 問題があれば修正し、再度ビルド・検証を行う
+
+> **注意:** `marp --images png` は内部で puppeteer (Chrome) を起動するため、sandbox モードでは失敗する。sandbox を無効にして実行すること。
 
 ## Marp ディレクティブの使い方
 
