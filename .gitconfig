@@ -1,0 +1,4 @@
+[wt]
+	basedir = .worktrees/
+	nocd = create
+	hook = tmux neww -c "$PWD" -n "$(basename -s .git `git remote get-url origin`):$(git branch --show-current)"

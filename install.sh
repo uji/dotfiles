@@ -21,6 +21,9 @@ ln -sf "${DOTFILES_DIR}/ghostty" "${HOME}/.config/ghostty"
 mkdir -p "${HOME}/.claude"
 ln -sf "${DOTFILES_DIR}/.claude/settings.json" "${HOME}/.claude/settings.json"
 
+# git config
+git config --global include.path "${DOTFILES_DIR}/.gitconfig"
+
 # install vim/neovim packages
 mkdir -p "${DOTFILES_DIR}/vimrc/vim/pack/mypackage/opt"
 [ ! -d ${DOTFILES_DIR}/vimrc/vim/pack/mypackage/opt/minpac ] && git clone https://github.com/k-takata/minpac.git "${DOTFILES_DIR}/vimrc/vim/pack/mypackage/opt/minpac"

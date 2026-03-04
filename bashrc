@@ -63,6 +63,11 @@ fghq() {
   cd $(ghq root)/$repo
 }
 
+# cd git-wt worktree by fzf
+fwt() {
+  cd $(git-wt | fzf-tmux --header-lines=1 | awk '{if ($1 == "*") print $2; else print $1}')
+}
+
 # prompt settings
 source ~/dotfiles/git-prompt.sh
 
