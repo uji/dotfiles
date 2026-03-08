@@ -14,8 +14,9 @@ function! s:on_lsp_buffer_enabled() abort
   nmap <buffer> K <plug>(lsp-hover)
   nmap <buffer> ga <plug>(lsp-code-action)
 
-  let g:lsp_format_sync_timeout = 1000
-  autocmd! BufWritePre *.rs,*.go call execute('LspDocumentFormatSync')
+  " NOTE: 実験的に無効に
+  " let g:lsp_format_sync_timeout = 1000
+  " autocmd! BufWritePre *.rs,*.go call execute('LspDocumentFormatSync')
 endfunction
 
 augroup lsp_install
