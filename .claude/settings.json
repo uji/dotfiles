@@ -19,5 +19,6 @@
     "example-skills@anthropic-agent-skills": true,
     "gopls-lsp@claude-plugins-official": true
   },
-  "language": "japanese"
+  "language": "japanese",
+  "teammateMode": "tmux"
 }
