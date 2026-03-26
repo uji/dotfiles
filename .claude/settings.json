@@ -10,8 +10,8 @@
       "Bash(sed:*)",
       "Bash(mkdir:*)",
       "Bash(git add:*)",
-      "WebFetch(domain:github.com)",
-      "WebFetch(domain:www.npmjs.com)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
       "WebSearch"
     ]
   },
