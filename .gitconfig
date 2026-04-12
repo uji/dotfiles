@@ -2,3 +2,5 @@
 	basedir = .worktrees/
 	nocd = create
 	hook = tmux neww -c "$PWD" -n "$(basename -s .git `git remote get-url origin`):$(git branch --show-current)"
+  deletehook = "WID=$(tmux list-windows -a -F '#{window_id}/#{window_name}' | grep -F /$(basename -s .git $(git remote get-url origin)):$(git branch --show-current) | head -1 | cut -d/ -f1); test $WID && tmux kill-window -t $WID; git push origin --delete $(git branch --show-current) || true"
+
